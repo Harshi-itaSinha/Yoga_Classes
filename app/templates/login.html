@@ -1,0 +1,59 @@
+<!-- app/templates/login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <!-- Bootstrap CSS (you can link to the CDN or include it locally) -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+  <h2>Login</h2>
+  <form id="loginForm" method="POST">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="dob">Date of Birth:</label>
+      <input type="date" class="form-control" id="dob" name="dob" required>
+    </div>
+    <div class="form-group">
+      <label for="age">Age:</label>
+      <input type="number" class="form-control" id="age" name="age" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" class="form-control" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Login</button>
+  </form>
+</div>
+
+<!-- Bootstrap JS and jQuery (you can link to the CDN or include them locally) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Custom script for handling login form submission -->
+<script>
+  document.getElementById('loginForm').addEventListener('submit', function (event) {
+    var name = document.getElementById('name').value;
+    var dob = document.getElementById('dob').value;
+    var age = document.getElementById('age').value;
+    var password = document.getElementById('password').value;
+
+    // Basic validation - Check if all fields are filled
+    if (!name || !dob || !age || !password) {
+      alert('Please fill in all fields.');
+      event.preventDefault();
+    }
+  });
+</script>
+
+</body>
+</html>
