@@ -11,6 +11,11 @@ WireFrame of HomePage:
 
 
 
+ER diagram (DataBase Designt):
+![image](https://github.com/Harshi-itaSinha/Yoga_Classes/assets/73345908/7fbcae73-6570-401c-9fc9-f88159785ae7)
+
+
+
 Implementation:
 
 * The user first visits the Landing Page  where he/she choose to login or signup 
